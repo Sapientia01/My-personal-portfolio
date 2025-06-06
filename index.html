@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chala Hiko - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-brand">Portfolio</div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text">
+            <h1 class="title">Welcome to My Portfolio</h1>
+            <h2 class="name">Chala Hiko</h2>
+            <div class="dynamic-text">
+              <span class="static-text">I am a </span>
+              <span class="dynamic-text-content"></span>
+            </div>
+            <p class="home-description">
+              A passionate developer focused on creating functional and secure
+              web experiences.
+            </p>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn primary">
+                <i class="fas fa-code"></i>
+                View My Work
+              </a>
+              <a href="#contact" class="btn secondary">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="home-image">
+            <img src="assets/images/avatar.png" alt="Avatar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-profile">
+            <div class="about-image">
+              <img
+                src="assets/images/me2.png"
+                alt="Chala Hiko"
+                class="circular-image"
+              />
+            </div>
+            <div class="about-image-name">Chala Hiko</div>
+          </div>
+
+          <div class="about-intro">
+            <p class="about-greeting">
+              👋 Hi there! I'm <span class="highlight">Chala Hiko</span>
+            </p>
+            <p class="about-role">
+              💻 A passionate
+              <span class="highlight">Frontend Developer</span> and
+              <span class="highlight">Competitive Programmer</span>
+            </p>
+            <p class="about-education">
+              🎓 Currently pursuing my studies at
+              <span class="highlight"
+                >Adama Science and Technology University</span
+              >. I love diving into web development and exploring new
+              technologies that make the web more amazing!
+            </p>
+            <div class="about-lists-container">
+              <div class="about-interests">
+                <p>🚀 My journey is focused on:</p>
+                <ul class="interest-list">
+                  <li>Mastering Fullstack Development and Web Security</li>
+                  <li>Solving complex programming challenges</li>
+                  <li>Building functional and secure web experiences</li>
+                </ul>
+              </div>
+              <div class="about-collaboration">
+                <p>🤝 I'm always excited to collaborate on projects that:</p>
+                <ul class="collaboration-list">
+                  <li>Solve real-world problems</li>
+                  <li>Make a positive impact</li>
+                  <li>Explore cybersecurity and open source</li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-cta">
+              <a href="#contact" class="btn primary">
+                <i class="fas fa-envelope"></i>
+                Let's Connect!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h4>HTML5</h4>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h4>CSS3</h4>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h4>JavaScript</h4>
+              </div>
+              <div class="skill-card learning">
+                <i class="fab fa-react"></i>
+                <h4>React</h4>
+                <span class="learning-badge">Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h4>C++</h4>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h4>Python</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/product-list-with-cart.jpg"
+                alt="Product List With Cart"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Product List With Cart</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Product-list-with-cart/tree/main"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/multi-step-form.jpg"
+                alt="Multi Step Form"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Multi Step Form</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Multi-Steps-Form"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/browser-extension-manager.jpg"
+                alt="Browser Extension Manager"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Browser Extension Manager</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Browser-extension-manager"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/interactive-card-form.jpg"
+                alt="Interactive Card Form Menu"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Interactive Card Form Menu</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Interactive-card-form-menu"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/time-tracking.jpg"
+                alt="Time Tracking Dashboard"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Time Tracking Dashboard</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Time-Tracking-Dashboard"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/rating-card.jpg"
+                alt="Interactive Rating Card"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Interactive Rating Card</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Interactive-Rating"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/torrent-home.png"
+                alt="Torrent Home Page"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Torrent Home Page</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Torrent-Home-page"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/redstore-clone.png"
+                alt="RedStore Page Clone"
+              />
+            </div>
+            <div class="project-info">
+              <h3>RedStore Page Clone</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Red-Store"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/fauxica-clone.png"
+                alt="Fauxica Page Clone"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Fauxica Page Clone</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Fauxica"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 10 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/news-homepage.jpg"
+                alt="News Home Page"
+              />
+            </div>
+            <div class="project-info">
+              <h3>News Home Page</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/News-Homepage"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 11 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/intro-section.jpg"
+                alt="Intro Section"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Intro Section</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Intro-Section-with-dropdown-nav-"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 12 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Project previews/sophos-login.png"
+                alt="Sophos Login Page"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Sophos Login Page</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapientia01/Sophos"
+                  target="_blank"
+                  class="btn small"
+                  ><i class="fab fa-github"></i> Source Code</a
+                >
+                <button class="btn small show-page">
+                  <i class="fas fa-external-link-alt"></i> Show Page
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img src="" alt="Project Preview" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/hikochala@gmail.com"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+                minlength="2"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="Enter subject"
+                minlength="3"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Enter your message"
+                minlength="10"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn primary">
+              <span class="btn-text">Send Message</span>
+              <div class="btn-loader"></div>
+            </button>
+            <div class="form-status"></div>
+          </form>
+
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+
+            <div class="social-links">
+              <a
+                href="https://t.me/infinite_wisdoms"
+                target="_blank"
+                class="social-link"
+                title="Telegram"
+              >
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/share/16RdgVuu4g/"
+                target="_blank"
+                class="social-link"
+                title="Facebook"
+              >
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </a>
+              <a
+                href="https://github.com/Sapientia01"
+                target="_blank"
+                class="social-link"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/chala-hiko-276653340"
+                target="_blank"
+                class="social-link"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="mailto:hikochala@gmail.com"
+                class="social-link"
+                title="Email"
+              >
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Chala Hiko</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
