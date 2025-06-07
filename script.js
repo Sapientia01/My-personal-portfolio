@@ -167,7 +167,6 @@ if (isTouchDevice()) {
 
 // Project cards functionality
 const projectCards = document.querySelectorAll(".project-card");
-const showPageButtons = document.querySelectorAll(".show-page");
 
 const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
@@ -190,16 +189,6 @@ const handleProjectCardsAnimation = () => {
 
 handleProjectCardsAnimation();
 window.addEventListener("scroll", handleProjectCardsAnimation);
-
-// Project page button handling
-showPageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const projectTitle = button
-      .closest(".project-info")
-      .querySelector("h3").textContent;
-    alert(`Live demo for "${projectTitle}" coming soon!`);
-  });
-});
 
 // Dynamic text animation
 const dynamicTextContent = document.querySelector(".dynamic-text-content");
