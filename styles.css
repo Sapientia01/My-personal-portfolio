@@ -631,6 +631,7 @@ body {
 .skill-card:nth-child(3) i {
   color: #f7df1e;
 } /* JavaScript */
+
 .skill-card:nth-child(4) i {
   color: #61dafb;
 } /* React */
@@ -702,6 +703,29 @@ body {
   color: var(--text-color);
 }
 
+.languages {
+  display: flex;
+  gap: 12px;
+}
+.language {
+  padding: 2px 7px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 10px;
+}
+.html {
+  color: #e44d26;
+  border-color: #e44d26;
+}
+.css {
+  color: #264de4;
+  border-color: #264de4;
+}
+
+.js {
+  color: #f7df1e;
+  border-color: #f7df1e;
+}
 .project-links {
   display: flex;
   gap: 1rem;
