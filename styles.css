@@ -1293,7 +1293,19 @@ body {
     font-size: 1rem;
   }
 }
+@media (max-width: 480px) {
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 
+  .cta-buttons .btn {
+    max-width: 80%;
+    min-width: 80%;
+  }
+}
 /* Hover Effects for Custom Cursor */
 a:hover ~ .cursor,
 button:hover ~ .cursor {
