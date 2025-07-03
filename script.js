@@ -286,7 +286,7 @@ contactForm.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       formStatus.textContent =
-        "Message sent successfully! I'll get back to you soon.";
+        "Message sent successfully!";
       formStatus.className = "form-status success";
       contactForm.reset();
     } else {
