@@ -1,3 +1,5 @@
+import { Projects } from "./projects data.js";
+
 // Custom cursor functionality
 const cursor = document.querySelector(".cursor");
 const cursorFollower = document.querySelector(".cursor-follower");
@@ -54,57 +56,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         behavior: "smooth",
         block: "start",
       });
-    }
-  });
-});
-
-// Contact form handling
-const contactForm = document.getElementById("contact-form");
-const formStatus = document.querySelector(".form-status");
-const submitBtn = contactForm.querySelector("button[type='submit']");
-
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  submitBtn.classList.add("loading");
-  submitBtn.disabled = true;
-
-  try {
-    const formData = new FormData(contactForm);
-    const response = await fetch(contactForm.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      formStatus.textContent =
-        "Message sent successfully! I'll get back to you soon.";
-      formStatus.className = "form-status success";
-      contactForm.reset();
-    } else {
-      throw new Error("Failed to send message");
-    }
-  } catch (error) {
-    formStatus.textContent =
-      "Oops! Something went wrong. Please try again later.";
-    formStatus.className = "form-status error";
-  } finally {
-    submitBtn.classList.remove("loading");
-    submitBtn.disabled = false;
-  }
-});
-
-// Form validation
-const inputs = contactForm.querySelectorAll("input, textarea");
-inputs.forEach((input) => {
-  input.addEventListener("input", () => {
-    if (input.validity.valid) {
-      input.classList.remove("invalid");
-    } else {
-      input.classList.add("invalid");
     }
   });
 });
@@ -225,6 +176,60 @@ function typeText() {
 
 window.addEventListener("load", typeText);
 
+// adding projects to the page
+const projectsGrid = document.querySelector(".projects-grid");
+let projectsGridHTML = "";
+
+Projects.forEach((project) => {
+  const name = project.name;
+  const image = project.image;
+  const languages = project.languages;
+  const githubLink = project.githubLink;
+  const netlifyLink = project.netlifyLink;
+  let languagesHTML = "";
+
+  languages.forEach((language) => {
+    languagesHTML += ` 
+<p class="${language} language"> ${language.toUpperCase()}</p>
+`;
+  });
+
+  projectsGridHTML += `
+  
+         <div class="project-card  card">
+            <div class="project-image">
+              <img
+                src=" ${image}"
+                alt=${name}
+                class="img"
+              />
+            </div>
+            <div class="project-info">
+              <h3>${name}</h3>
+              <div class="languages">
+                 ${languagesHTML}
+              </div>
+              <div class="project-links">
+                <a
+                  href="${githubLink}"
+                  class="btn small"
+                  ><i class="fab fa-github"></i></a
+                >
+                <a
+                  href="${netlifyLink}"
+                  target="_blank"
+                  class="btn small show-page"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  `;
+});
+
+projectsGrid.innerHTML = projectsGridHTML;
+
 // Image modal functionality
 const modal = document.getElementById("imageModal");
 const modalImg = modal.querySelector(".modal-image");
@@ -256,4 +261,55 @@ document.addEventListener("keydown", (e) => {
     modal.classList.remove("active");
     document.body.style.overflow = "";
   }
+});
+
+// Contact form handling
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.querySelector(".form-status");
+const submitBtn = contactForm.querySelector("button[type='submit']");
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  submitBtn.classList.add("loading");
+  submitBtn.disabled = true;
+
+  try {
+    const formData = new FormData(contactForm);
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      formStatus.textContent =
+        "Message sent successfully! I'll get back to you soon.";
+      formStatus.className = "form-status success";
+      contactForm.reset();
+    } else {
+      throw new Error("Failed to send message");
+    }
+  } catch (error) {
+    formStatus.textContent =
+      "Oops! Something went wrong. Please try again later.";
+    formStatus.className = "form-status error";
+  } finally {
+    submitBtn.classList.remove("loading");
+    submitBtn.disabled = false;
+  }
+});
+
+// Form validation
+const inputs = contactForm.querySelectorAll("input, textarea");
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input.validity.valid) {
+      input.classList.remove("invalid");
+    } else {
+      input.classList.add("invalid");
+    }
+  });
 });
