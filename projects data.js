@@ -46,6 +46,14 @@ export const Projects = [
   },
 
   {
+    name: "Manage Landing Page",
+    languages: ["html", "css", "js", "tailwindcss"],
+    image: "assets/images/Project previews/manage-landing-page.jpg",
+    githubLink: "https://github.com/Sapientia01/Manage-Landing-Page",
+    netlifyLink: "https://manage-landingpage-bysapientia.netlify.app/",
+  },
+
+  {
     name: "Time Tracking Dashboard",
     languages: ["html", "css", "js"],
     image: "assets/images/Project previews/time-tracking.jpg",
