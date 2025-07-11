@@ -1,4 +1,4 @@
-import { Projects } from "./projects data.js";
+import { Projects, Certificates } from "./data.js";
 
 // Custom cursor functionality
 const cursor = document.querySelector(".cursor");
@@ -115,6 +115,24 @@ if (isTouchDevice()) {
   cursor.style.display = "none";
   cursorFollower.style.display = "none";
 }
+// adding certificates to page
+
+const cert_container = document.querySelector(".cert-carousel");
+let cert_containerHTML = "";
+
+Certificates.forEach((certificate) => {
+  cert_containerHTML += `
+<div class="cert-card">
+  <img
+    src="${certificate.image}"
+    alt=""
+  />
+  <h4>${certificate.name}</h4>
+  <p>Issued ${certificate.date}</p>
+</div>
+`;
+});
+cert_container.innerHTML = cert_containerHTML;
 
 // Project cards functionality
 const projectCards = document.querySelectorAll(".project-card");
@@ -285,8 +303,7 @@ contactForm.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      formStatus.textContent =
-        "Message sent successfully!";
+      formStatus.textContent = "Message sent successfully!";
       formStatus.className = "form-status success";
       contactForm.reset();
     } else {
