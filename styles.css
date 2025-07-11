@@ -575,11 +575,12 @@ body {
   margin: 0 auto;
   padding: 2rem;
 }
-
+.certificates,
 .skill-category {
   margin-bottom: 3rem;
 }
 
+.certificates h3,
 .skill-category h3 {
   font-size: 1.5rem;
   color: var(--subheading-color);
@@ -587,7 +588,7 @@ body {
   position: relative;
   padding-left: 1rem;
 }
-
+.certificates h3::before,
 .skill-category h3::before {
   content: "";
   position: absolute;
@@ -602,20 +603,20 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
   justify-items: center;
 }
 
 .skill-card {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 250px;
+  max-width: 180px;
   text-align: center;
 }
 
@@ -643,26 +644,93 @@ body {
   );
 }
 
+.skill-card:nth-child(7) i,
 .skill-card:nth-child(1) i {
   color: #e44d26;
 } /* HTML5 */
+/* C++ */
+.skill-card:nth-child(8) i,
 .skill-card:nth-child(2) i {
   color: #264de4;
 } /* CSS3 */
-.skill-card:nth-child(3) i {
+/* Python */
+.skill-card:nth-child(4) i {
   color: #f7df1e;
 } /* JavaScript */
 
-.skill-card:nth-child(4) i {
+.skill-card:nth-child(5) i {
   color: #61dafb;
 } /* React */
 
-.skill-card:nth-child(6) i {
-  color: #00599c;
-} /* C++ */
-.skill-card:nth-child(7) i {
-  color: #3776ab;
-} /* Python */
+/* ===== Certificates ===== */
+
+.cert-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.cert-carousel::-webkit-scrollbar {
+  width: 12px;
+}
+.cert-carousel::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+}
+.cert-carousel::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+.cert-carousel::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* .cert-carousel::-webkit-scrollbar {
+  background: var(--card-bg);
+  width: 0;
+  height: 0;
+} */
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 220px;
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+.cert-card img {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.cert-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cert-card p {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
 
 /* ========================== */
 /* ===== PROJECTS SECTION ===== */
