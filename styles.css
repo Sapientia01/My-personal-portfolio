@@ -197,21 +197,6 @@ body {
   width: 100%;
 }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.nav-toggle span {
-  width: 30px;
-  height: 2px;
-  background: var(--text-color);
-  transition: var(--transition);
-}
-
-
 .humbarger {
   cursor: pointer;
   transition: all 0.3s ease-in;
