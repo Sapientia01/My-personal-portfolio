@@ -30,7 +30,7 @@ document.addEventListener("mouseenter", () => {
 const humbarger = document.querySelector(".humbarger");
 const navMenu = document.querySelector(".nav-menu");
 
-navToggle.addEventListener("click", () => {
+humbarger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
   // navToggle.classList.toggle("active");
   humbarger.classList.toggle("open");
