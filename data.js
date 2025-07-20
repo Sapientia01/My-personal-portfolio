@@ -1,7 +1,14 @@
 export const Projects = [
+   {
+    name: "Project Manager",
+    languages: [ "tailwindcss", "react"],
+    image: "assets/images/Project previews/project-view.png",
+    githubLink: "https://github.com/Sapientia01/Project-Manager",
+    netlifyLink: "https://projectmanager-bysapientia.netlify.app/",
+  },
   {
     name: "Investment Calculator",
-    languages: ["html", "css", "js", "react"],
+    languages: [ "css", "js", "react"],
     image: "assets/images/Project previews/investment-calculator.png",
     githubLink: "https://github.com/Sapientia01/Investment-Calculator",
     netlifyLink: "https://investment-calculator-bysapientia.netlify.app/",
@@ -9,7 +16,7 @@ export const Projects = [
 
   {
     name: "Tic Tac Toe",
-    languages: ["html", "css", "js", "react"],
+    languages: [ "css", "js", "react"],
     image: "assets/images/Project previews/tic-tac-toe.png",
     githubLink: "https://github.com/Sapientia01/Tic-Tac-Toe",
     netlifyLink: "https://tic-tac-toe-bysapientia.netlify.app/",
