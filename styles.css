@@ -211,6 +211,54 @@ body {
   transition: var(--transition);
 }
 
+
+.humbarger {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.humbarger-top,
+.humbarger-middle,
+.humbarger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: var(--text-color);
+  transition: var(--transition);
+  transform: rotate(0);
+}
+
+.humbarger-middle {
+  transform: translateY(7px);
+}
+.humbarger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0);
+}
+
+.open .humbarger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .humbarger-middle {
+  display: none;
+}
+
+.open .humbarger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+
+
+
 /* ========================== */
 /* ===== HOME SECTION ===== */
 /* ========================== */
