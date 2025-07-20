@@ -158,4 +158,9 @@ export const Certificates = [
     image: "./assets/images/certificates/Udacity_1.png",
     date: "Oct 2024",
   },
+     {
+    name: "Udacity",
+    image: "./assets/images/certificates/Udacity-AI.png",
+    date: "Oct 2024",
+  },
 ];
