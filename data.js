@@ -163,4 +163,28 @@ export const Certificates = [
     image: "./assets/images/certificates/Udacity-AI.png",
     date: "Jul 2025",
   },
+     {
+    name: "Udacity",
+    image: "./assets/images/certificates/Udacity_DS.png",
+    date: "Jul 2025",
+  },
+
+  {
+    name: "Programming Hub",
+    image: "./assets/images/certificates/ProgramingHub-Ethicalhacking.png",
+    date: "Nov 2022",
+  },
+
+  {
+    name: "Programming Hub",
+    image:
+      "./assets/images/certificates/ProgramingHub-programmingFundamentals.png",
+    date: "Nov 2022",
+  },
+
+  {
+    name: "Programming Hub",
+    image: "./assets/images/certificates/ProgramingHub-IT-basics.png",
+    date: "Nov 2022",
+  },
 ];
